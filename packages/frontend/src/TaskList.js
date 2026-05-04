@@ -27,6 +27,12 @@ function TaskList({ onEdit }) {
     });
   };
 
+  const priorityStyles = {
+    P1: { background: 'linear-gradient(135deg, #f44336 0%, #d32f2f 100%)', color: 'white' },
+    P2: { background: 'linear-gradient(135deg, #ff9800 0%, #ef6c00 100%)', color: 'white' },
+    P3: { background: 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)', color: 'white' },
+  };
+
   const fetchTasks = async () => {
     try {
       setLoading(true);
@@ -220,6 +226,16 @@ function TaskList({ onEdit }) {
                   }}
                 />
               )}
+              <Chip
+                label={task.priority || 'P3'}
+                size="small"
+                sx={{
+                  height: 20,
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  ...(priorityStyles[task.priority] || priorityStyles['P3'])
+                }}
+              />
               <Box 
                 sx={{ 
                   display: 'flex', 
