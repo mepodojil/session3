@@ -158,6 +158,7 @@ function TaskForm({ onSave, initialTask }) {
             inputProps={{ 'data-testid': 'priority-select' }}
             sx={{
               borderRadius: 2,
+              color: '#07F2E6',
               '&:hover .MuiOutlinedInput-notchedOutline': {
                 borderColor: '#1976d2',
               },
@@ -166,9 +167,9 @@ function TaskForm({ onSave, initialTask }) {
               }
             }}
           >
-            <MenuItem value="P1">P1</MenuItem>
-            <MenuItem value="P2">P2</MenuItem>
-            <MenuItem value="P3">P3</MenuItem>
+            <MenuItem value="P1" className="priority-menu-item" sx={{ color: priority === 'P1' ? '#07F2E6' : '#7A7A7A' }}>P1</MenuItem>
+            <MenuItem value="P2" className="priority-menu-item" sx={{ color: priority === 'P2' ? '#07F2E6' : '#7A7A7A' }}>P2</MenuItem>
+            <MenuItem value="P3" className="priority-menu-item" sx={{ color: priority === 'P3' ? '#07F2E6' : '#7A7A7A' }}>P3</MenuItem>
           </Select>
         </FormControl>
         {error && <Typography color="error" sx={{ fontWeight: 500, fontSize: '0.875rem' }}>{error}</Typography>}

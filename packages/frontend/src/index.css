@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Priority dropdown menu items */
+.priority-menu-item {
+  color: #7A7A7A !important;
+}
+
+.priority-menu-item.Mui-selected {
+  color: #07F2E6 !important;
+}
+
+.priority-menu-item.Mui-selected:hover,
+.priority-menu-item:hover {
+  color: #07F2E6 !important;
+}
